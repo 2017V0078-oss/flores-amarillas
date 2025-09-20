@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  overflow: hidden;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: yellow;
+  height: 100vh;
+  position: relative;
+}
+
+/* Globos */
+.globos {
+  margin-top: 20px;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  animation: flotar 3s ease-in-out infinite;
+}
+.globos span {
+  background: #FFD700;
+  border-radius: 50%;
+  padding: 15px 20px;
+  box-shadow: 0 0 20px gold;
+}
+
+/* Texto */
+.texto h2 {
+  margin: 10px 0 0;
+  font-size: 2em;
+  color: orange;
+}
+.texto h1 {
+  margin: 0;
+  font-size: 3em;
+  text-shadow: 0 0 20px red, 0 0 40px orange;
+  animation: latido 2s infinite;
+}
+
+@keyframes latido {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* Ramo */
+.ramo img {
+  margin-top: 20px;
+  width: 250px;
+  animation: flotar 4s ease-in-out infinite;
+}
+
+@keyframes flotar {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* Fuegos */
+#fuegos {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Flores cayendo */
+.flores {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.flor {
+  position: absolute;
+  top: -50px;
+  width: 40px;
+  opacity: 0.4;
+  filter: blur(1px);
+  animation: caer linear infinite;
+}
+
+@keyframes caer {
+  0% { transform: translateY(-50px) rotate(0deg); }
+  100% { transform: translateY(110vh) rotate(360deg); }
+}
